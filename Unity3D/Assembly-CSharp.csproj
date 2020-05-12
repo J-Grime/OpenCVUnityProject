@@ -61,15 +61,20 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\CountdownScript.cs" />
+    <Compile Include="Assets\EndCount.cs" />
+    <Compile Include="Assets\EndScreenScript.cs" />
     <Compile Include="Assets\RW\Barrier Pack\Scripts\ContrastStretch.cs" />
     <Compile Include="Assets\RW\Barrier Pack\Scripts\GlobalFog.cs" />
     <Compile Include="Assets\RW\Barrier Pack\Scripts\PostEffectsBase.cs" />
     <Compile Include="Assets\RW\Scripts\CubeController.cs" />
+    <Compile Include="Assets\RW\Scripts\EndScore.cs" />
     <Compile Include="Assets\RW\Scripts\GameRoads.cs" />
     <Compile Include="Assets\RW\Scripts\PlayerControllerScript.cs" />
     <Compile Include="Assets\RW\Scripts\RoadDeletionScript.cs" />
-    <Compile Include="Assets\ScoreScript.cs" />
-    <Compile Include="Assets\StartMenu.cs" />
+    <Compile Include="Assets\RW\Scripts\ScoreScript.cs" />
+    <Compile Include="Assets\RW\Scripts\StartMenu.cs" />
+    <None Include="Assets\RW\Scripts\haarcascade_frontalface_default.xml" />
     <None Include="Assets\RW\Barrier Pack\Shaders\Contrast Stretch\MinMaxReduction.shader" />
     <None Include="Assets\RW\Barrier Pack\Shaders\Contrast Stretch\Apply.shader" />
     <None Include="Assets\RW\Barrier Pack\Shaders\GlobalFog.shader" />
@@ -77,6 +82,7 @@
     <None Include="Assets\RW\BrokenVector\LowPolyShaders\Shaders\LowPolyPBRShader.shader" />
     <None Include="Assets\RW\Barrier Pack\Shaders\Contrast Stretch\Adaptation.shader" />
     <None Include="Assets\RW\BrokenVector\LowPolyShaders\Shaders\LowPolyUnlitShader.shader" />
+    <None Include="Assets\RW\Scripts\requirements.txt" />
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>C:/OpenCVUnityProject/Unity3D/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>

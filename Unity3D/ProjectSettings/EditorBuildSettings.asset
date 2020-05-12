@@ -12,6 +12,6 @@ EditorBuildSettings:
     path: Assets/RW/Scenes/Main.unity
     guid: 7036c9c1e2c1140d0b1659704aeaed32
   - enabled: 1
-    path: Assets/RW/Scenes/End Screen.unity
+    path: Assets/RW/Scenes/EndScreen.unity
     guid: ca01192cd5babbc4eae4a6666c9d22ea
   m_configObjects: {}

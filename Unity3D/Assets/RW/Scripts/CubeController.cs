@@ -1,24 +1,26 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CubeController : MonoBehaviour
 {
     Rigidbody rb;
     string pos;
     int xpos;
-    bool _wait;
+    float _wait;
     bool current;
     public static int score;
     List<int> positions;
     // Start is called before the first frame update
     void Start()
     {
+        _wait = 10.0f;
+        score = 0;
         positions = new List<int> { 12,6,0,-6,-12};
         pos = PlayerControllerScript.text;
         xpos = 2;
         score = 0;
-        _wait = false;
     }
 
     // Update is called once per frame
@@ -26,6 +28,11 @@ public class CubeController : MonoBehaviour
     {
         move();
         transform.position += new Vector3(0.0f, 0.0f, -40.0f*Time.deltaTime);
+        if (_wait<0)
+        {
+            GameObject NoCol = GameObject.Find("NoCollision");
+            NoCol.SetActive(false);
+        }
     }
 
 
@@ -42,12 +49,22 @@ public class CubeController : MonoBehaviour
         {
             transform.position += new Vector3(-12.0f * Time.deltaTime, 0.0f, 0.0f);
         }
+        _wait -= Time.deltaTime;
     }
 
 
     private void OnCollisionEnter(Collision collision)
     {
         Debug.Log("hit" + collision.gameObject);
+        if (_wait<0)
+        { LoadScene("EndScreen");}
+        
+    }
+
+    public void LoadScene(string scenename)
+    {
+        Debug.Log("sceneName to load: " + scenename);
+        SceneManager.LoadScene(scenename);
     }
 }
 

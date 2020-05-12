@@ -58,7 +58,7 @@ public class GameRoads : MonoBehaviour
     private void _Instantiate(float temp)
     {
         References.Add(Instantiate(road, new Vector3(0, 0, temp), Quaternion.identity) as GameObject);
-        for (int l = 0; l<Random.Range(1,3); l++)
+        for (int l = 0; l<Random.Range(1,4); l++)
         {
         vehiclesOnRoad.Add(Instantiate(vehicles[Random.Range(0,vehicles.Count)].gameObject, new Vector3(Lanes[(Random.Range(0,Lanes.Count))], this.transform.position.y, temp-Random.Range(-10,10)), this.transform.rotation)as GameObject);
         for (int v = 0; v < vehiclesOnRoad.Count; v++)
